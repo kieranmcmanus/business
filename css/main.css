@@ -1,0 +1,218 @@
+/* Fix for responsive images */
+img {
+  max-width: 100%;
+}
+/* ----------------------------------------
+Base Styles
+------------------------------------------- */
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+}
+p {
+  font-family: 'Prata', serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1{
+  font-size: 72px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 36px;
+}
+a, a:hover {
+  text-decoration: none;
+}
+
+/* ----------------------------------------
+Nav
+------------------------------------------- */
+nav, .nav2 nav{
+  background-color: #FFFFFF;
+  opacity: .7;
+  position: fixed;
+	top: 0;
+  left: 0;
+	right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+.main_nav {
+  display: none;
+}
+nav ul {
+  list-style:none;
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  transition: all .3s ease-in-out;
+}
+nav li {
+  display: inline-block;
+}
+nav a, .nav2 nav a {
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: none;
+  text-transform: uppercase;
+  padding: 5px;
+  color: #2C3E50;
+}
+nav a:hover, .nav2 nav a:hover {
+  color: #FC4349;
+  cursor: pointer;
+}
+#hamburger {
+  display: none;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+}
+#hamburger i {
+  color: #2C3E50;
+}
+#hamburger i:hover {
+  color: #FC4349;
+}
+.nav2 ul {
+  list-style:none;
+  display: none;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  padding: 0;
+}
+.nav2 li {
+  display: block;
+}
+.block {
+  display: block;
+}
+nav img {
+  max-height: 40px;
+}
+/* ----------------------------------------
+Header
+------------------------------------------- */
+header {
+  padding-top: 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../img/mockup_v3.png');
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  color: #FFFFFF;
+}
+#title {
+  margin-top: 200px;
+  margin-left: 800px;
+  display: flex;
+}
+#title h1 {
+  line-height: .6;
+  text-align: left;
+  padding-top: 15px;
+  margin-left: -20px;
+
+}
+#subtitle {
+  margin-top: 250px;
+  font-size: 64px;
+}
+#learn_more {
+  margin-top: 20px;
+  background-color: #18d8fa;
+  color: #FFFFFF;
+  font-size: 32px;
+  border-radius: 20px;
+}
+#logo {
+  /* max-width: 150px; */
+  max-height: 150px;
+}
+
+/* ----------------------------------------
+Services
+------------------------------------------- */
+#services {
+  background-color: #15242B;
+  padding: 100px 200px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+.container {
+  display: flex;
+}
+.service {
+  justify-content: space-around;
+  padding: 15px;
+  width: 33%;
+}
+.service p {
+  padding-top: 10px;
+}
+.service i {
+  font-size: 24px;
+  padding: 10px;
+}
+.get-started {
+  padding: 5px 50px;
+}
+
+/* ----------------------------------------
+Capabilities
+------------------------------------------- */
+
+.carousel-inner {
+  width: 100%;
+  max-height: 100vh;
+}
+.carousel-item {
+}
+.carousel-caption {
+  top: 50vh;
+  color: #292d48;
+}
+
+/* ----------------------------------------
+About
+------------------------------------------- */
+#about {
+  color: #15242B;
+  /* padding: 100px 200px; */
+  display: flex;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+.about-info {
+  justify-content: space-around;
+  padding: 100px;
+  width: 60%;
+}
+.about-pic {
+  justify-content: space-around;
+  width: 40%;
+}
+
+/* ----------------------------------------
+Work
+------------------------------------------- */
+#work {
+  background-color: #292d48;
+  padding: 100px 200px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+.work_container {
+  display: flex;
+  padding: 50px;
+}
+.project_container {
+  justify-content: space-around;
+  padding: 50px;
+
+}
