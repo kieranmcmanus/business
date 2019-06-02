@@ -123,8 +123,10 @@ header {
 
 }
 #subtitle {
-  margin-top: 250px;
+  margin: 250px 425px 0px 425px;;
   font-size: 64px;
+  background: rgba(66, 91, 117, 0.4);
+  border-radius: 50px;
 }
 #learn_more {
   margin-top: 20px;
@@ -132,6 +134,10 @@ header {
   color: #FFFFFF;
   font-size: 32px;
   border-radius: 20px;
+  /* border: 2px solid #FFFFFF; */
+}
+#learn_more:hover {
+  background-color: #425B75;
 }
 #logo {
   /* max-width: 150px; */
@@ -176,7 +182,14 @@ Capabilities
 .carousel-item {
 }
 .carousel-caption {
-  top: 50vh;
+  top: 40vh;
+  color: #292d48;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+  bottom: auto;
+}
+.carousel-caption p {
+  font-size: 22px;
   color: #292d48;
 }
 
@@ -204,7 +217,7 @@ Work
 ------------------------------------------- */
 #work {
   background-color: #292d48;
-  padding: 100px 200px;
+  /* padding: 100px 200px; */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 .work_container {
@@ -212,7 +225,30 @@ Work
   padding: 50px;
 }
 .project_container {
-  justify-content: space-around;
+  /* padding: 50px; */
+  width: 50%;
+}
+.project_info {
+  position: absolute;
   padding: 50px;
-
+  margin: 0 auto;
+  top: 25%;
+  display: none;
+  z-index: 10;
+}
+.project {
+  position: relative;
+  background: rgba(41, 45, 72, 0);
+}
+.project img {
+  border-radius: 50px;
+}
+.project img:hover {
+  opacity: 0.2;
+}
+.project_info:hover img {
+  opacity: 0.2;
+}
+.project:hover .project_info {
+  display: block !important;
 }
