@@ -18,6 +18,7 @@ p {
 }
 h1{
   font-size: 72px;
+
 }
 h2 {
   font-size: 48px;
@@ -102,46 +103,94 @@ Header
 ------------------------------------------- */
 header {
   padding-top: 70px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('../img/mockup_v3.png');
-  background-attachment: fixed;
   height: 100vh;
   width: 100%;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #292d48;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-image: url('../img/florian-klauer-489-unsplash.jpg'); */
+  /* background-image: url('../img/isaac-benhesed-249427-unsplash.jpg'); */
+  background-image: url('../img/joe-woods-739738-unsplash.jpg');
+  /* background-image: url('../img/osman-rana-293978-unsplash.jpg'); */
+  /* background-image: url('../img/thomas-heintz-769574-unsplash.jpg'); */
+  background-attachment: fixed;
 }
 #title {
-  margin-top: 200px;
-  margin-left: 800px;
-  display: flex;
+  margin: 0 40%;
+  position: relative;
 }
 #title h1 {
   line-height: .6;
   text-align: left;
   padding-top: 15px;
-  margin-left: -20px;
+  margin-left: 50px;
+  position: relative;
 
 }
 #subtitle {
-  margin: 250px 425px 0px 425px;;
-  font-size: 64px;
-  background: rgba(66, 91, 117, 0.4);
-  border-radius: 50px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 48px;
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(30, end),
+    blinking-cursor .5s step-end infinite;
 }
 #learn_more {
-  margin-top: 20px;
   background-color: #18d8fa;
   color: #FFFFFF;
   font-size: 32px;
-  border-radius: 20px;
-  /* border: 2px solid #FFFFFF; */
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
 }
-#learn_more:hover {
+#learnmore strong {
+  position: relative;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+#learnmore strong:hover {
   background-color: #425B75;
 }
+
+#learnmore strong:before {
+  content: "";
+  position: absolute;
+  background: #425B75;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+
+#learnmore strong:hover:before {
+  top: 0;
+}
+/* #learn_more:hover {
+  background-color: #425B75;
+} */
 #logo {
   /* max-width: 150px; */
   max-height: 150px;
+  position: absolute;
+  left: -150px;
 }
 
 /* ----------------------------------------
@@ -179,13 +228,12 @@ Capabilities
   width: 100%;
   max-height: 100vh;
 }
-.carousel-item {
+.carousel-img-bg {
+  opacity: .4;
 }
 .carousel-caption {
   top: 40vh;
   color: #292d48;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 50px;
   bottom: auto;
 }
 .carousel-caption p {
@@ -216,13 +264,57 @@ About
 Work
 ------------------------------------------- */
 #work {
-  background-color: #292d48;
-  /* padding: 100px 200px; */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  font-family: 'Lobster', cursive;
+  background-color: #FFFFFF;
+  color: #292d48;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-image: url('../img/joe-woods-739738-unsplash.jpg');
+  background-attachment: fixed;
+  padding: 50px;
 }
+
+#work h2 {
+  padding: 50px;
+  font-size: 63px;
+}
+
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;
+}
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 2px solid #292d48;
+  top: 50%;
+  width: 50%;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+/* #work_desc {
+  padding: 50px 400px;
+} */
 .work_container {
   display: flex;
-  padding: 50px;
+  flex-wrap: wrap;
+  margin: 50px;
+  background-color: #292d48;
+  color: #FFFFFF;
+  /* padding: 100px 200px; */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 .project_container {
   /* padding: 50px; */
@@ -241,14 +333,54 @@ Work
   background: rgba(41, 45, 72, 0);
 }
 .project img {
-  border-radius: 50px;
+  /* border-radius: 50px; */
+  width: 100%;
 }
 .project img:hover {
   opacity: 0.2;
 }
-.project_info:hover img {
-  opacity: 0.2;
+.project:hover img {
+  opacity: 0.2 !important;
 }
 .project:hover .project_info {
   display: block !important;
+}
+
+/* ----------------------------------------
+Sell
+------------------------------------------- */
+#sell {
+  width: 100%;
+  padding: 100px;
+  color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background: #425B75;
+  background-image: url("../img/nyc.jpg"); /* fallback */
+  background-image: url("../img/nyc.jpg"), linear-gradient(rgba(41, 45, 72, 0), rgba(41, 45, 72, 0.4)); /* W3C */
+}
+
+/* ----------------------------------------
+Footer
+------------------------------------------- */
+
+footer {
+  background-color: #292d48;
+  /* padding: 100px 200px; */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  overflow: auto;
+  padding: 50px;
+}
+
+/* ----------------------------------------
+Typing
+------------------------------------------- */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: #18d8fa }
 }
