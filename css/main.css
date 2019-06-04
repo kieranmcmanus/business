@@ -102,7 +102,7 @@ nav img {
 Header
 ------------------------------------------- */
 header {
-  padding-top: 70px;
+  padding-top: 100px;
   height: 100vh;
   width: 100%;
   background-color: #FFFFFF;
@@ -124,80 +124,61 @@ header {
   line-height: .6;
   text-align: left;
   padding-top: 15px;
-  margin-left: 50px;
+  margin-left: 100px;
   position: relative;
-
 }
-#subtitle {
-  margin: 0 auto;
-  text-align: center;
-  font-size: 48px;
+#subtitle_wrapper {
+  width: 50%;
+  overflow: hidden;
   position: absolute;
   left: 50%;
   bottom: 25%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+#subtitle {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-size: 48px;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
+  border-right: .15em solid #292d48; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation:
     typing 3.5s steps(30, end),
-    blinking-cursor .5s step-end infinite;
+    blinking-cursor .5s step-end 30;
 }
 #learn_more {
-  background-color: #18d8fa;
+  background-color: #292d48;
   color: #FFFFFF;
   font-size: 32px;
   position: absolute;
   left: 50%;
   bottom: 5%;
+  border: solid 2px #FFFFFF;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }
-#learnmore strong {
-  position: relative;
-  transition:         0.08s ease-in;
-  -o-transition:      0.08s ease-in;
-  -ms-transition:     0.08s ease-in;
-  -moz-transition:    0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
+#learn_more:hover {
+  background-color: #18d8fa;
 }
-#learnmore strong:hover {
-  background-color: #425B75;
-}
-
-#learnmore strong:before {
-  content: "";
-  position: absolute;
-  background: #425B75;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 100%;
-  z-index: -1;
-  -webkit-transition: top 0.09s ease-in;
-}
-
-#learnmore strong:hover:before {
-  top: 0;
-}
-/* #learn_more:hover {
-  background-color: #425B75;
-} */
 #logo {
   /* max-width: 150px; */
   max-height: 150px;
   position: absolute;
-  left: -150px;
+  left: -100px;
+  transition: all 1s ease-in-out;
+}
+#logo:hover {
+  transform: rotate(360deg);
 }
 
 /* ----------------------------------------
 Services
 ------------------------------------------- */
 #services {
-  background-color: #15242B;
+  background-color: #292d48;
   padding: 100px 200px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
@@ -377,10 +358,10 @@ footer {
 Typing
 ------------------------------------------- */
 @keyframes typing {
-  from { width: 0 }
+  from { width: 0% }
   to { width: 100% }
 }
 @keyframes blinking-cursor {
   from, to { border-color: transparent }
-  50% { border-color: #18d8fa }
+  50% { border-color: #292d48 }
 }
