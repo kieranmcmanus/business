@@ -170,9 +170,9 @@ header {
   left: -100px;
   transition: all 1s ease-in-out;
 }
-#logo:hover {
+/* #logo:hover {
   transform: rotate(360deg);
-}
+} */
 
 /* ----------------------------------------
 Services
@@ -230,11 +230,17 @@ About
   /* padding: 100px 200px; */
   display: flex;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  color: #FFFFFF;
+  background-color: #292d48;
 }
 .about-info {
   justify-content: space-around;
   padding: 100px;
   width: 60%;
+}
+.about-info p {
+  font-size: 24px;
+  padding: 50px;
 }
 .about-pic {
   justify-content: space-around;
@@ -249,9 +255,9 @@ Work
   background-color: #FFFFFF;
   color: #292d48;
   /* background-repeat: no-repeat; */
-  background-size: cover;
+  /* background-size: cover;
   background-image: url('../img/joe-woods-739738-unsplash.jpg');
-  background-attachment: fixed;
+  background-attachment: fixed; */
   padding: 50px;
 }
 
@@ -342,6 +348,7 @@ Sell
   background-image: url("../img/nyc.jpg"), linear-gradient(rgba(41, 45, 72, 0), rgba(41, 45, 72, 0.4)); /* W3C */
 }
 
+
 /* ----------------------------------------
 Footer
 ------------------------------------------- */
@@ -351,7 +358,23 @@ footer {
   /* padding: 100px 200px; */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   overflow: auto;
-  padding: 50px;
+}
+.copyright {
+  padding: 10px;
+}
+
+#personalDetails {
+  background-color: #FFFFFF;
+  color: #292d48;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+#personalDetails i {
+  font-size: 36px;
+  padding: 10px;
+  color: #292d48;
 }
 
 /* ----------------------------------------
@@ -365,3 +388,33 @@ Typing
   from, to { border-color: transparent }
   50% { border-color: #292d48 }
 }
+
+/* ----------------------------------------
+Media Queries
+------------------------------------------- */
+@media screen and (max-width: 1500px) {
+  #subtitle_wrapper {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #subtitle {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #subtitle {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #subtitle {
+    animation: none;
+    border-right: none;
+  }
+}
+/* @media screen and (max-width: 850px) {
+  #subtitle {
+    white-space: normal;
+  }
+} */
