@@ -14,9 +14,9 @@ $(window).on('scroll', function () {
 
   var w = window.innerWidth;
 
-  if (distanceScrolled < 30 && w > 870) {
+  if (distanceScrolled < 30 && w > 930) {
     $('.main_nav').hide();
-  } else if (distanceScrolled > 30 && w > 870) {
+  } else if (distanceScrolled > 30 && w > 930) {
     $('.main_nav').fadeIn(350);
   }
 });

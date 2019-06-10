@@ -47,6 +47,9 @@ nav, .nav2 nav{
 .main_nav {
   display: none;
 }
+.menu li {
+  padding-top: 10px;
+}
 nav ul {
   list-style:none;
   display: inline-block;
@@ -115,20 +118,34 @@ header {
   /* background-image: url('../img/osman-rana-293978-unsplash.jpg'); */
   /* background-image: url('../img/thomas-heintz-769574-unsplash.jpg'); */
   background-attachment: fixed;
+  position: relative;
 }
 #title {
   margin: 0 40%;
-  position: relative;
+  position: absolute;
+  top: 30%;
+  /* left: 50%; */
 }
 #title h1 {
   line-height: .6;
+  font-size: 84px;
   text-align: left;
   padding-top: 15px;
   margin-left: 100px;
   position: relative;
 }
+#logo {
+  /* max-width: 150px; */
+  max-height: 150px;
+  position: absolute;
+  left: -100px;
+  transition: all 1s ease-in-out;
+}
+/* #logo:hover {
+  transform: rotate(360deg);
+} */
 #subtitle_wrapper {
-  width: 50%;
+  width:auto;
   overflow: hidden;
   position: absolute;
   left: 50%;
@@ -153,25 +170,33 @@ header {
   background-color: #292d48;
   color: #FFFFFF;
   font-size: 32px;
+  border: solid 2px #FFFFFF;
   position: absolute;
   left: 50%;
   bottom: 5%;
-  border: solid 2px #FFFFFF;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+#learn_more a{
+  color: #FFFFFF;
+}
 #learn_more:hover {
-  background-color: #18d8fa;
+  background-color: #a8d3e3;
 }
-#logo {
-  /* max-width: 150px; */
-  max-height: 150px;
-  position: absolute;
-  left: -100px;
-  transition: all 1s ease-in-out;
+.style_btn {
+  background-color: #FFFFFF;
+  color: #292d48;
+  font-size: 32px;
 }
-/* #logo:hover {
-  transform: rotate(360deg);
+.style_btn a {
+  color: #292d48;
+}
+.style_btn:hover {
+  /* background-color: #18d8fa; */
+  background-color: #a8d3e3;
+}
+/* .style_btn:hover a{
+  color: #FFFFFF !important;
 } */
 
 /* ----------------------------------------
@@ -182,13 +207,14 @@ Services
   padding: 100px 200px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
-.container {
+.service_container {
   display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
 }
 .service {
-  justify-content: space-around;
   padding: 15px;
-  width: 33%;
+  width: 30%;
 }
 .service p {
   padding-top: 10px;
@@ -199,6 +225,10 @@ Services
 }
 .get-started {
   padding: 5px 50px;
+}
+.service_sep hr{
+  display: none;
+  border: 1px solid #FFFFFF;
 }
 
 /* ----------------------------------------
@@ -213,7 +243,7 @@ Capabilities
   opacity: .4;
 }
 .carousel-caption {
-  top: 40vh;
+  top: 25%;
   color: #292d48;
   bottom: auto;
 }
@@ -236,12 +266,14 @@ About
 }
 .about-info {
   /* justify-content: space-around; */
-  padding: 100px;
+  /* padding: 100px; */
+  padding-top: 100px;
   width: 60%;
 }
 .about-info p {
   font-size: 24px;
-  padding: 50px;
+  padding: 25px 50px;
+  margin: 0 auto;
 }
 .about-pic {
   /* justify-content: space-around; */
@@ -256,9 +288,9 @@ Work
   background-color: #FFFFFF;
   color: #292d48;
   /* background-repeat: no-repeat; */
-  /* background-size: cover;
+  background-size: cover;
   background-image: url('../img/joe-woods-739738-unsplash.jpg');
-  background-attachment: fixed; */
+  background-attachment: fixed;
   padding: 50px;
 }
 
@@ -349,6 +381,15 @@ Sell
   background-image: url("../img/nyc.jpg"), linear-gradient(rgba(41, 45, 72, 0), rgba(41, 45, 72, 0.4)); /* W3C */
 }
 
+#sell button:hover {
+  background-color: #292d48;
+  color: #FFFFFF;
+}
+
+#sell a:hover {
+  color: #FFFFFF;
+}
+
 
 /* ----------------------------------------
 Footer
@@ -377,6 +418,9 @@ footer {
   padding: 10px;
   color: #292d48;
 }
+#personalDetails i:hover {
+  color: #a8d3e3;
+}
 
 /* ----------------------------------------
 Typing
@@ -394,16 +438,11 @@ Typing
 Media Queries
 ------------------------------------------- */
 @media screen and (max-width: 1500px) {
-  #subtitle_wrapper {
-    width: 70%;
-  }
   .about-info p {
-    font-size: 20px;
-    padding: 25px;
+    font-size: 18px;
   }
-  .about-info {
-    padding: 50px;
-    width: 60%;
+  #title {
+    margin: 0 35%;
   }
 }
 @media screen and (max-width: 1400px) {
@@ -411,39 +450,223 @@ Media Queries
     font-size: 42px;
   }
   .about-info {
-    padding: 20px;
-    width: 60%;
+    padding-top: 50px;
   }
-  .about-info p {
-    font-size: 20px;
-    padding: 10px;
+  .project_info {
+    top: 0%;
+  }
+  #services {
+    padding: 100px;
   }
 }
 @media screen and (max-width: 1200px) {
   #subtitle {
     font-size: 34px;
   }
-  .about-info {
-    padding: 10px;
-    width: 60%;
-  }
   .about-info p {
+    padding: 10px 50px;
     font-size: 16px;
-    padding: 5px;
+  }
+  .about-info {
+    padding-top: 25px;
+  }
+  .project_info {
+    padding: 25px;
+  }
+  .project_info h3{
+    font-size: 24px;
+  }
+  .project_info h4 {
+    font-size: 18px;
+  }
+  .project_info p{
+    font-size: 14px;
+  }
+  #services {
+    padding: 100px 50px;
   }
 }
 @media screen and (max-width: 1000px) {
-  #subtitle {
-    animation: none;
-    border-right: none;
+  #about h2{
+    font-size: 36px;
+  }
+  .about-info {
+    padding-top: 10px;
+  }
+  .about-info p{
+    padding: 10px 25px;
+  }
+  #services {
+    padding: 50px 15px;
+  }
+  #services h3{
+    font-size: 32px;
+  }
+  .service {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 930px) {
+  #title {
+    margin: 0 25%;
+  }
+  #hamburger {
+    display: block;
+  }
+  .about-pic {
+    display: none;
+    width: 0%;
+  }
+  .about-info {
+    width: 100%;
+    padding-top: 200px;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    background: linear-gradient(rgba(21,36,43,0.8), rgba(21,36,43,0.8)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    min-height: 100vh;
+    /* background-attachment: fixed; */
+  }
+  .about-info p {
+    font-size: 24px;
+    padding: 25px 50px;
+    margin: 0 auto;
+  }
+  #about h2{
+    font-size: 48px;
   }
   #about {
+    background: url('../img/naxos.jpg');
+  }
+  .work_container {
     display: block;
     margin: 0 auto;
   }
+  .project_container {
+    width: 100%;
+  }
+  .project_info {
+    padding: 50px;
+    top: 25%;
+  }
+  .project_info h3{
+    font-size: 36px;
+  }
+  .project_info h4 {
+    font-size: 24px;
+  }
+  .project_info p{
+    font-size: 18px;
+  }
+  .carousel-caption{
+    top: 25%;
+  }
+  .carousel-caption p {
+    display: none;
+  }
+  /* .carousel-caption h2 {
+    font-size: 24px;
+  } */
+  .d-md-block {
+    display: block!important;
+  }
+  #services {
+    padding: 50px;
+  }
+  #services h3{
+    font-size: 36px;
+  }
+  .service {
+    padding: 10px;
+    width: 100%;
+  }
+  .service p{
+    font-size: 24px;
+  }
+  .service_container{
+    display: block;
+  }
+  .service_sep hr{
+    display: block;
+  }
+  #sell h1 {
+    font-size: 56px;
+  }
 }
-/* @media screen and (max-width: 850px) {
+@media screen and (max-width: 725px) {
+  .project_info {
+    top: 0%;
+    /* padding: 25px; */
+  }
+  #work {
+    margin: 25px 10px 10px 0px;
+  }
+  #title {
+    margin: 0 20%;
+    top: 20%;
+  }
   #subtitle {
+    animation: none;
+    border-right: none;
+    overflow: auto;
     white-space: normal;
   }
-} */
+  #subtitle_wrapper {
+    left:auto;
+    transform: none;
+    -webkit-transform: none;
+    margin: 10px;
+  }
+  .fancy span:after, .fancy span:before {
+    border-bottom: none;
+    margin: 0 auto;
+  }
+  #sell h1 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #title {
+    margin: 0 15%;
+  }
+  #title h1 {
+    line-height: .6;
+    font-size: 72px;
+  }
+  #logo {
+    left: -75px;
+  }
+  #work h2 {
+    font-size: 48px;
+  }
+  #sell h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .project_info {
+    padding: 25px;
+  }
+  .project_info h3{
+    font-size: 24px;
+  }
+  .project_info h4 {
+    font-size: 18px;
+  }
+  .project_info p{
+    font-size: 14px;
+  }
+  #title {
+    margin: 0 10%;
+  }
+  #sell h1 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #title h1 {
+    font-size: 60px;
+  }
+}
