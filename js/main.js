@@ -19,6 +19,20 @@ $(window).on('scroll', function () {
   } else if (distanceScrolled > 30 && w > 930) {
     $('.main_nav').fadeIn(350);
   }
+
+  if (distanceScrolled > 500 && w > 930) {
+    $('.service-left').addClass('slide-left');
+    console.log('Slide left');
+    $('.service-right').addClass('slide-right');
+    console.log('Slide right');
+  }
+
+  if (distanceScrolled < 1650 && w > 930) {
+    $('.about-info').hide();
+  } else if (distanceScrolled > 1650) {
+    $('.about-info').fadeIn(2000);
+  }
+
 });
 
 // Image carousel

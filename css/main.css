@@ -186,15 +186,16 @@ header {
   transform: translateX(-50%);
 }
 #subtitle {
-  font-family: 'Inconsolata', serif;
+  /* font-family: 'Inconsolata', serif; */
   margin: 0 auto;
   padding: 0;
   text-align: center;
   font-size: 48px;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #292d48; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: .15em; /* Adjust as needed */
+  overflow: hidden;
+  border-right: .15em solid #292d48;
+  white-space: nowrap;
+  letter-spacing: .15em;
+  line-height: normal;
   animation:
     typing 3.5s steps(30, end),
     blinking-cursor .5s step-end 30;
@@ -254,13 +255,15 @@ Services
   padding-bottom: 50px;
 }
 .service {
-  padding: 15px;
-  width: 30%;
+  padding: 50px;
+  width: 33%;
+  transition: 1s ease-in-out;
+  position: relative;
 }
 .service p {
   padding-top: 10px;
   font-size: 1.2em;
-  line-height: 1.5em;
+  line-height: 1.7em;
 }
 .service i {
   font-size: 24px;
@@ -280,12 +283,34 @@ Services
   font-size: 1.2em;
 } */
 
+.service-left {
+  left: -600px
+}
+.service-right {
+  right: -600px;
+}
+
+.slide-left {
+  animation-name: slideleft 0.5s forwards;
+  -webkit-animation: slideleft 0.5s forwards;
+  position: absolute;
+}
+.slide-right {
+  animation-name: slideright 0.5s forwards;
+  -webkit-animation: slideright 0.5s forwards;
+  position: absolute;
+}
 /* ----------------------------------------
 Capabilities
 ------------------------------------------- */
 
 .carousel-inner {
-  width: 100%;
+  /* max-width: 100%; */
+  max-height: 100vh;
+  /* width: auto; */
+}
+.carousel-item img {
+  /* max-width: 100%; */
   max-height: 100vh;
 }
 .carousel-img-bg {
@@ -319,6 +344,7 @@ About
   /* justify-content: space-around; */
   /* padding: 100px; */
   padding-top: 100px;
+  padding-bottom: 100px;
   width: 60%;
 }
 .about-info p {
@@ -329,10 +355,10 @@ About
 .about-pic {
   /* justify-content: space-around; */
   width: 40%;
-  height: 100vh;
+  max-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(40, 128, 184, 0.6), rgba(40, 128, 184, 0.6)), url("../img/naxos.jpg");
+  background-image: url("../img/naxos.jpg");
 }
 
 /* ----------------------------------------
@@ -352,6 +378,7 @@ Work
 #work h2 {
   padding: 50px;
   font-size: 63px;
+  letter-spacing: normal;
 }
 
 #work a {
@@ -448,7 +475,6 @@ Sell
   background-image: linear-gradient(rgba(40, 128, 184, 0), rgba(40, 128, 184, 0.6)), url("../img/tim-mossholder-571646-unsplash.jpg"); */
 }
 
-
 /* #sell button {
   background-color: #3497DB;
   color: #EBEFF0;
@@ -464,6 +490,10 @@ Sell
 #sell a:hover {
   color: #EBEFF0;
 } */
+
+#sell h2 {
+  margin-bottom: 25px;
+}
 
 
 /* ----------------------------------------
@@ -505,6 +535,12 @@ Typing
   from, to { border-color: transparent }
   50% { border-color: #292d48 }
 }
+@keyframes slideleft {
+  100% { left: 0; }
+}
+@keyframes slideright {
+  100% { right: 0; }
+}
 
 /* ----------------------------------------
 Media Queries
@@ -521,14 +557,17 @@ Media Queries
   #subtitle {
     font-size: 42px;
   }
-  .about-info {
-    padding-top: 50px;
-  }
   .project_info {
     top: 0%;
   }
   #services {
     padding: 100px;
+  }
+  .service {
+    padding: 25px;
+  }
+  #services {
+    padding: 100px 50px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -540,7 +579,7 @@ Media Queries
     font-size: 16px;
   }
   .about-info {
-    padding-top: 25px;
+    padding-top: 50px;
   }
   .project_info {
     padding: 25px;
@@ -554,8 +593,11 @@ Media Queries
   .project_info p{
     font-size: 14px;
   }
+  .service {
+    padding: 10px;
+  }
   #services {
-    padding: 100px 50px;
+    padding: 50px 15px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -563,19 +605,16 @@ Media Queries
     font-size: 36px;
   }
   .about-info {
-    padding-top: 10px;
+    padding-top: 25px;
   }
   .about-info p{
     padding: 10px 25px;
   }
   #services {
-    padding: 50px 15px;
+    padding: 25px;
   }
   #services h3{
     font-size: 32px;
-  }
-  .service {
-    padding: 10px;
   }
 }
 @media screen and (max-width: 930px) {
@@ -638,11 +677,16 @@ Media Queries
   /* .carousel-caption h2 {
     font-size: 24px;
   } */
+  .carousel-item img {
+    /* height: 100vh; */
+    max-width: none;
+    width: auto !important;
+  }
   .d-md-block {
     display: block!important;
   }
   #services {
-    padding: 50px;
+    padding: 25px;
   }
   #services h3{
     font-size: 36px;
@@ -660,26 +704,39 @@ Media Queries
   .service_sep hr{
     display: block;
   }
+  .service-left {
+    left: 0;
+  }
+  .service-right {
+    right: 0;
+  }
   #sell h1 {
     font-size: 56px;
+  }
+  #sell {
+    padding: 50px;
   }
 }
 @media screen and (max-width: 725px) {
   .project_info {
     top: 0%;
-    /* padding: 25px; */
   }
   #work {
     margin: 25px 10px 10px 0px;
+    padding: 25px;
   }
   #title {
     margin: 0 20%;
     top: 20%;
   }
+  #title h1 {
+    line-height: .6;
+    font-size: 72px;
+  }
   #subtitle {
     animation: none;
     border-right: none;
-    overflow: auto;
+    overflow: none;
     white-space: normal;
   }
   #subtitle_wrapper {
@@ -692,8 +749,27 @@ Media Queries
     border-bottom: none;
     margin: 0 auto;
   }
+  .fancy span {
+    line-height: normal;
+  }
+  #work h2 {
+    padding: 25px;
+  }
   #sell h1 {
     font-size: 48px;
+  }
+  #sell {
+    padding: 50px 25px;
+  }
+  #services h3{
+    font-size: 32px;
+  }
+  .service {
+    padding: 10px;
+    width: 100%;
+  }
+  .service p{
+    font-size: 18px;
   }
 }
 
@@ -703,7 +779,7 @@ Media Queries
   }
   #title h1 {
     line-height: .6;
-    font-size: 72px;
+    font-size: 64px;
   }
   #logo {
     left: -75px;
@@ -713,6 +789,19 @@ Media Queries
   }
   #sell h1 {
     font-size: 40px;
+  }
+  .project_info {
+    padding: 25px;
+  }
+  .project_info p{
+    font-size: 14px;
+  }
+  .carousel-caption{
+    top: 15%;
+  }
+  .about-info {
+    padding-top: 100px;
+    padding-bottom: 25px;
   }
 }
 
