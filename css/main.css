@@ -5,21 +5,21 @@ img {
 
 /* Color Theme Swatches in Hex */
 .Flat-UI-1-hex { color: #292d48; }
-.Flat-UI-2-hex { color: #E64B3B; }
+.Flat-UI-2-hex { color: #df4c59; }
 .Flat-UI-3-hex { color: #EBEFF0; }
 .Flat-UI-4-hex { color: #3497DB; }
 .Flat-UI-5-hex { color: #2880B8; }
 
 /* Color Theme Swatches in RGBA */
 .Flat-UI-1-rgba { color: rgba(43, 61, 79, 1); }
-.Flat-UI-2-rgba { color: rgba(230, 75, 59, 1); }
+.Flat-UI-2-rgba { color: rgba(223, 76, 89, 1); }
 .Flat-UI-3-rgba { color: rgba(235, 239, 240, 1); }
 .Flat-UI-4-rgba { color: rgba(52, 151, 219, 1); }
 .Flat-UI-5-rgba { color: rgba(40, 128, 184, 1); }
 
 /* Color Theme Swatches in HSLA */
 .Flat-UI-1-hsla { color: hsla(210, 29, 23, 1); }
-.Flat-UI-2-hsla { color: hsla(5, 77, 56, 1); }
+.Flat-UI-2-hsla { color: hsla(355, 66, 54, 1); }
 .Flat-UI-3-hsla { color: hsla(191, 14, 93, 1); }
 .Flat-UI-4-hsla { color: hsla(204, 69, 53, 1); }
 .Flat-UI-5-hsla { color: hsla(203, 64, 43, 1); }
@@ -40,16 +40,13 @@ p {
 }
 h1{
   font-size: 72px;
-  /* font-family: 'Lobster', cursive; */
 }
 h2 {
   font-size: 42px;
   letter-spacing: 0.2em;
-  /* font-family: 'Lobster', cursive; */
 }
 h3 {
   font-size: 32px;
-  /* font-family: 'Lobster', cursive; */
 }
 a, a:hover {
   text-decoration: none;
@@ -94,7 +91,7 @@ nav a, .nav2 nav a {
   color: #292d48;
 }
 nav a:hover, .nav2 nav a:hover {
-  color: #E64B3B;
+  color: #df4c59;
   cursor: pointer;
 }
 #hamburger {
@@ -108,7 +105,7 @@ nav a:hover, .nav2 nav a:hover {
   color: #292d48;
 }
 #hamburger i:hover {
-  color: #E64B3B;
+  color: #df4c59;
 }
 .nav2 ul {
   list-style:none;
@@ -137,16 +134,7 @@ header {
   color: #292d48;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-image: url('../img/florian-klauer-489-unsplash.jpg'); */
-  /* background-image: url('../img/isaac-benhesed-249427-unsplash.jpg'); */
-  /* background-image: url('../img/joe-woods-739738-unsplash.jpg'); */
-  /* background-image: url('../img/osman-rana-293978-unsplash.jpg'); */
-  /* background-image: url('../img/thomas-heintz-769574-unsplash.jpg'); */
-  /* background-image: url('../img/bernard-hermant-591275-unsplash.jpg'); */
-  background-image: url('../img/carli-jeen-430-unsplash.jpg');
-  /* background-image: url('../img/tim-mossholder-571646-unsplash.jpg'); */
-  /* background-image: url('../img/waldemar-brandt-1259291-unsplash.jpg'); */
-  /* background-image: linear-gradient(rgba(43, 61, 79, 0.2), rgba(43, 61, 79, 0.2)), url("../img/carli-jeen-430-unsplash.jpg"); */ */
+  background-image: url('../img/nyc.jpg');
   background-attachment: fixed;
   position: relative;
 }
@@ -154,7 +142,6 @@ header {
   margin: 0 40%;
   position: absolute;
   top: 30%;
-  /* left: 50%; */
 }
 #title h1 {
   font-family: 'Open Sans', sans-serif;
@@ -166,12 +153,13 @@ header {
   position: relative;
 }
 #logo {
-  /* max-width: 150px; */
   max-height: 150px;
   max-width: 150px;
   position: absolute;
-  left: -100px;
+  left: -150px;
   transition: all 1s ease-in-out;
+  animation: logoslide 0.5s forwards;
+  -webkit-animation: logoslide 0.5s forwards;
 }
 #logo:hover {
   transform: rotate(360deg);
@@ -204,7 +192,6 @@ header {
   background-color: #292d48;
   color: #EBEFF0;
   font-size: 24px;
-  /* border: solid 2px #EBEFF0; */
   position: absolute;
   left: 50%;
   bottom: 5%;
@@ -213,7 +200,6 @@ header {
 }
 #learn_more a{
   color: #EBEFF0;
-  /* font-family: 'Lobster', cursive; */
 }
 #learn_more:hover {
   background-color: #3497DB;
@@ -224,13 +210,11 @@ header {
   font-size: 1.2em;
   letter-spacing: 0.2em;
   border: none;
-  /* font-family: 'Lobster', cursive; */
 }
 .style_btn a {
   color: #292d48;
 }
 .style_btn:hover {
-  /* background-color: #18d8fa; */
   background-color: #3497DB;
   border: none;
 }
@@ -272,9 +256,6 @@ Services
 .service h3 {
   letter-spacing: 0.2em;
 }
-/* .get-started {
-  padding: 5px 50px;
-} */
 .service_sep hr{
   display: none;
   border: 1px solid #EBEFF0;
@@ -291,12 +272,12 @@ Services
 }
 
 .slide-left {
-  animation-name: slideleft 0.5s forwards;
+  animation: slideleft 0.5s forwards;
   -webkit-animation: slideleft 0.5s forwards;
   position: absolute;
 }
 .slide-right {
-  animation-name: slideright 0.5s forwards;
+  animation: slideright 0.5s forwards;
   -webkit-animation: slideright 0.5s forwards;
   position: absolute;
 }
@@ -314,7 +295,7 @@ Capabilities
   max-height: 100vh;
 }
 .carousel-img-bg {
-  opacity: .4;
+  opacity: .2;
 }
 .carousel-caption {
   top: 25%;
@@ -341,8 +322,6 @@ About
   background-color: #3497DB;
 }
 .about-info {
-  /* justify-content: space-around; */
-  /* padding: 100px; */
   padding-top: 100px;
   padding-bottom: 100px;
   width: 60%;
@@ -353,7 +332,6 @@ About
   margin: 0 auto;
 }
 .about-pic {
-  /* justify-content: space-around; */
   width: 40%;
   max-height: 100vh;
   background-size: cover;
@@ -442,7 +420,6 @@ Work
   background: rgba(41, 45, 72, 0);
 }
 .project img {
-  /* border-radius: 50px; */
   width: 100%;
 }
 .project img:hover {
@@ -465,31 +442,9 @@ Sell
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* background-image: url('../img/joe-woods-739738-unsplash.jpg'); */
-  /* background-image: url('../img/osman-rana-293978-unsplash.jpg'); */
-  /* background-image: url('../img/thomas-heintz-769574-unsplash.jpg'); */
-  /* background-image: url('../img/bernard-hermant-591275-unsplash.jpg'); */
-  /* background-image: url('../img/carli-jeen-430-unsplash.jpg'); */
-  background-image: url('../img/tim-mossholder-571646-unsplash.jpg');
-  /* background-image: url('../img/waldemar-brandt-1259291-unsplash.jpg'); */
-  background-image: linear-gradient(rgba(40, 128, 184, 0), rgba(40, 128, 184, 0.6)), url("../img/tim-mossholder-571646-unsplash.jpg"); */
+  background-image: url('../img/brick.jpg');
+  background-image: linear-gradient(rgba(40, 128, 184, 0), rgba(40, 128, 184, 0.6)), url("../img/brick.jpg"); */
 }
-
-/* #sell button {
-  background-color: #3497DB;
-  color: #EBEFF0;
-}
-#sell a {
-  color: #EBEFF0;
-}
-
-#sell button:hover {
-  background-color: #292d48;
-  color: #EBEFF0;
-}
-#sell a:hover {
-  color: #EBEFF0;
-} */
 
 #sell h2 {
   margin-bottom: 25px;
@@ -521,7 +476,7 @@ footer {
   color: #EBEFF0;
 }
 #personalDetails i:hover {
-  color: #E64B3B;
+  color: #df4c59;
 }
 
 /* ----------------------------------------
@@ -540,6 +495,9 @@ Typing
 }
 @keyframes slideright {
   100% { right: 0; }
+}
+@keyframes logoslide {
+  100% { left: -100px; }
 }
 
 /* ----------------------------------------
@@ -616,6 +574,14 @@ Media Queries
   #services h3{
     font-size: 32px;
   }
+  #logo {
+    max-height: 125px;
+    max-width: 125px;
+    left: -100px;
+  }
+  @keyframes logoslide {
+    100% { left: -50px; }
+  }
 }
 @media screen and (max-width: 930px) {
   #title {
@@ -669,11 +635,11 @@ Media Queries
     font-size: 18px;
   }
   .carousel-caption{
-    top: 25%;
+    top: 15%;
   }
-  .carousel-caption p {
+  /* .carousel-caption p {
     display: none;
-  }
+  } */
   /* .carousel-caption h2 {
     font-size: 24px;
   } */
@@ -771,6 +737,9 @@ Media Queries
   .service p{
     font-size: 18px;
   }
+  .carousel-caption p {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -782,7 +751,12 @@ Media Queries
     font-size: 64px;
   }
   #logo {
-    left: -75px;
+    max-height: 100px;
+    max-width: 100px;
+    left: -50px;
+  }
+  @keyframes logoslide {
+    100% { left: -25px; }
   }
   #work h2 {
     font-size: 48px;
@@ -797,7 +771,10 @@ Media Queries
     font-size: 14px;
   }
   .carousel-caption{
-    top: 15%;
+    top: 5%;
+  }
+  .carousel-caption h2 {
+    font-size: 36px;
   }
   .about-info {
     padding-top: 100px;
