@@ -795,16 +795,27 @@ Media Queries
   .project_info p{
     font-size: 14px;
   }
+  .about-info p {
+    font-size: 18px;
+  }
   #title {
     margin: 0 10%;
   }
   #sell h1 {
     font-size: 36px;
   }
+  #services button {
+    font-size: 0.9em;
+  }
 }
 
 @media screen and (max-width: 460px) {
   #title h1 {
-    font-size: 60px;
+    font-size: 48px;
+  }
+  #logo {
+    max-height: 75px;
+    max-width: 75px;
+    left: -25px;
   }
 }
