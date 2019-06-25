@@ -698,6 +698,11 @@ Media Queries
   .fancy span:after, .fancy span:before {
     border-bottom: none;
     margin: 0 auto;
+    content: none;
+    position: absolute;
+    height: 0px;
+    top: 0%;
+    width: 0%;
   }
   .fancy span {
     line-height: normal;
@@ -811,13 +816,15 @@ Media Queries
   }
   .project_info {
     top: 25%;
+    left: 0;
+    right: 0;
   }
 }
 
 @media screen and (max-width: 460px) {
   #title h1 {
-    margin-left: 50px;
     font-size: 48px;
+    margin-left: 75px;
   }
   #logo {
     max-height: 85px;
@@ -826,11 +833,5 @@ Media Queries
   }
   .carousel-caption h2 {
     font-size: 24px;
-  }
-  .project_info p {
-    display: none;
-  }
-  .project_info {
-    top: 25%;
   }
 }
