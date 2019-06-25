@@ -4,25 +4,12 @@ img {
 }
 
 /* Color Theme Swatches in Hex */
-.Flat-UI-1-hex { color: #292d48; }
-.Flat-UI-2-hex { color: #df4c59; }
-.Flat-UI-3-hex { color: #EBEFF0; }
-.Flat-UI-4-hex { color: #3497DB; }
-.Flat-UI-5-hex { color: #2880B8; }
+ /* { color: #292d48; }
+ { color: #df4c59; }
+ { color: #EBEFF0; }
+ { color: #3497DB; }
+ { color: #2880B8; } */
 
-/* Color Theme Swatches in RGBA */
-.Flat-UI-1-rgba { color: rgba(43, 61, 79, 1); }
-.Flat-UI-2-rgba { color: rgba(223, 76, 89, 1); }
-.Flat-UI-3-rgba { color: rgba(235, 239, 240, 1); }
-.Flat-UI-4-rgba { color: rgba(52, 151, 219, 1); }
-.Flat-UI-5-rgba { color: rgba(40, 128, 184, 1); }
-
-/* Color Theme Swatches in HSLA */
-.Flat-UI-1-hsla { color: hsla(210, 29, 23, 1); }
-.Flat-UI-2-hsla { color: hsla(355, 66, 54, 1); }
-.Flat-UI-3-hsla { color: hsla(191, 14, 93, 1); }
-.Flat-UI-4-hsla { color: hsla(204, 69, 53, 1); }
-.Flat-UI-5-hsla { color: hsla(203, 64, 43, 1); }
 
 /* ----------------------------------------
 Base Styles
@@ -129,14 +116,12 @@ Header
 header {
   padding-top: 100px;
   height: 100vh;
-  width: 100%;
   background-color: #EBEFF0;
   color: #292d48;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
   background-image: url('../img/nyc.jpg');
   background-attachment: fixed;
-  position: relative;
 }
 #title {
   margin: 0 40%;
@@ -436,14 +421,13 @@ Work
 Sell
 ------------------------------------------- */
 #sell {
-  width: 100%;
   padding: 100px;
   color: #EBEFF0;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-image: url('../img/brick.jpg');
-  background-image: linear-gradient(rgba(40, 128, 184, 0), rgba(40, 128, 184, 0.6)), url("../img/brick.jpg"); */
+  background-image: linear-gradient(rgba(40, 128, 184, 0), rgba(40, 128, 184, 0.6)), url("../img/brick.jpg");
 }
 
 #sell h2 {
@@ -702,7 +686,7 @@ Media Queries
   #subtitle {
     animation: none;
     border-right: none;
-    overflow: none;
+    overflow: auto;
     white-space: normal;
   }
   #subtitle_wrapper {
@@ -807,15 +791,46 @@ Media Queries
   #services button {
     font-size: 0.9em;
   }
+  header {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+  }
+  #sell {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-image: linear-gradient(rgba(40, 128, 184, 0.2), rgba(40, 128, 184, 0.6)), url("../img/brick.jpg");
+  }
+  #title h1 {
+    margin-left: 100px;
+  }
+  .carousel-caption h2 {
+    font-size: 24px;
+  }
+  .project_info p {
+    display: none;
+  }
+  .project_info {
+    top: 25%;
+  }
 }
 
 @media screen and (max-width: 460px) {
   #title h1 {
+    margin-left: 50px;
     font-size: 48px;
   }
   #logo {
-    max-height: 75px;
-    max-width: 75px;
-    left: -25px;
+    max-height: 85px;
+    max-width: 85px;
+    left: -50px;
+  }
+  .carousel-caption h2 {
+    font-size: 24px;
+  }
+  .project_info p {
+    display: none;
+  }
+  .project_info {
+    top: 25%;
   }
 }
