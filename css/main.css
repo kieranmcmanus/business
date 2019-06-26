@@ -119,7 +119,7 @@ header {
   background-color: #EBEFF0;
   color: #292d48;
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
   background-image: url('../img/nyc.jpg');
   background-attachment: fixed;
 }
